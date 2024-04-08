@@ -11,9 +11,6 @@ dependencies:
   react-dom:
     specifier: ^18.2.0
     version: 18.2.0(react@18.2.0)
-  scss:
-    specifier: ^0.2.4
-    version: 0.2.4
 
 devDependencies:
   '@types/react':
@@ -49,6 +46,9 @@ devDependencies:
   sass:
     specifier: ^1.70.0
     version: 1.70.0
+  scss:
+    specifier: ^0.2.4
+    version: 0.2.4
   typescript:
     specifier: ^5.2.2
     version: 5.3.3
@@ -1647,7 +1647,7 @@ packages:
   /ometa@0.2.2:
     resolution: {integrity: sha512-LZuoK/yjU3FvrxPjUXUlZ1bavCfBPqauA7fsNdwi+AVhRdyk2IzgP3JRnevvjzQ6fKHdUw8YISshf53FmpHrng==, tarball: https://registry.npmmirror.com/ometa/-/ometa-0.2.2.tgz}
     engines: {node: '>= 0.2.0'}
-    dev: false
+    dev: true
 
   /once@1.4.0:
     resolution: {integrity: sha512-lNaJgI+2Q5URQBkccEKHTQOPaXdUxnZZElQTZY0MFUAuaEqe1E+Nyvgdz/aIyNi6Z9MzO5dv1H8n58/GELp3+w==, tarball: https://registry.npmmirror.com/once/-/once-1.4.0.tgz}
@@ -1836,7 +1836,7 @@ packages:
     engines: {node: '>= 0.2.0'}
     dependencies:
       ometa: 0.2.2
-    dev: false
+    dev: true
 
   /semver@6.3.1:
     resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==, tarball: https://registry.npmmirror.com/semver/-/semver-6.3.1.tgz}
