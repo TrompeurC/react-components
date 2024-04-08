@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { useState } from "react"
+import React ,{ useEffect, useImperativeHandle, useState ,  } from "react"
 
 import classnames from 'classnames'
 
@@ -7,9 +7,27 @@ import "./index.scss"
 
 const monthNames = ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"]
 
-const Calendar = (() => {
+interface CalendarProps {
+  value?: Date,
+  onChange?: (date: Date) => void
+}
 
-  const [date, setData] = useState(new Date())
+interface CalendarRef {
+  getDate: () => Date,
+  setDate: (date: Date) => void,
+}
+
+
+const Calendar: React.ForwardRefRenderFunction<CalendarRef , CalendarProps > = ((props , ref) => {
+
+  const { value = new Date() , onChange} = props
+
+  useImperativeHandle(ref , () => ({
+    getDate: () => date,
+    setDate: (date: Date) => setData(date)
+  }))
+
+  const [date, setData] = useState(value)
 
   // 改变月份
   const handleChangeMonth = (value: number) => () => {
@@ -41,9 +59,13 @@ const Calendar = (() => {
     }
     // 当前月的日期
     for (let i = 1; i <= daysCount; i++) {
-      days.push(<div key={days.length} className={classnames('day', {
-        selected: i === date.getDate()
-      })} >{i}</div>)
+      const clickHandler = onChange?.bind(null, new Date(date.getFullYear(), date.getMonth(), i))
+      days.push(<div 
+            key={days.length} 
+            onClick={clickHandler}
+            className={classnames('day', {
+            selected: i === date.getDate()
+          })} >{i}</div>)
     }
     // 下个月的日期
     let mod = days.length % 7
@@ -54,6 +76,10 @@ const Calendar = (() => {
     }
     return days
   }
+
+  useEffect(() => {
+    setData(value)
+  } , [value])
 
   return (
     <div className="calendar">
@@ -78,4 +104,4 @@ const Calendar = (() => {
   )
 })
 
-export default Calendar
+export default React.forwardRef(Calendar);
