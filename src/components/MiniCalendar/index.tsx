@@ -82,7 +82,7 @@ const MiniCalendar: React.ForwardRefRenderFunction<CalendarRef , CalendarProps >
   } , [value])
 
   return (
-    <div className="calendar">
+    <div className="mini-calendar">
       <div className="calendar-header">
         <button onClick={handleChangeMonth(-1)} className="calendar-header-btn">&lt;</button>
         <span>{date.getFullYear() + '年' + monthNames[date.getMonth()]}</span>
