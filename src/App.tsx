@@ -1,5 +1,5 @@
 import React, { memo, useEffect, useState } from "react";
-import Calendar from "./components/calendar";
+import Calendar from "./components/mini-calendar";
 
 const App = memo(() => {
   const [date , setDate] = useState(new Date(2022,11,12))

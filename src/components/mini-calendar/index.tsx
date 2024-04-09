@@ -18,7 +18,7 @@ interface CalendarRef {
 }
 
 
-const Calendar: React.ForwardRefRenderFunction<CalendarRef , CalendarProps > = ((props , ref) => {
+const MiniCalendar: React.ForwardRefRenderFunction<CalendarRef , CalendarProps > = ((props , ref) => {
 
   const { value = new Date() , onChange} = props
 
@@ -104,4 +104,4 @@ const Calendar: React.ForwardRefRenderFunction<CalendarRef , CalendarProps > = (
   )
 })
 
-export default React.forwardRef(Calendar);
+export default React.forwardRef(MiniCalendar);
