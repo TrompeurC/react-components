@@ -1,11 +1,14 @@
 import { memo } from "react";
 import CalendarTest from "./components/Calendar/CalendarTest";
+import { IconAdd } from "./components/Icon/icons/IconAdd";
+import { IconEmail } from "./components/Icon/icons/IconEmail";
 
 const App = memo(() => {
   
   return (
     <div>
-      <CalendarTest></CalendarTest>
+      <IconAdd></IconAdd>
+      <IconEmail></IconEmail>
     </div>
   );
 });
