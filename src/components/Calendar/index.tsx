@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import type { Dayjs} from 'dayjs'
 
 import CalendarHeader from './CalendarHeader'
