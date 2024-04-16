@@ -1,6 +1,6 @@
 import { memo, useEffect, useRef } from "react";
-import './App.scss'
-import Portal from "./components/Portal";
+// import './App.scss'
+import MutationObserverTest1 from "./components/MutationObserverTest";
 
 const App = memo(() => {
   const portalRef = useRef(null);
@@ -9,13 +9,7 @@ const App = memo(() => {
   }, [])
   return (
     <div>
-      <Portal ref={portalRef}>
-        <div>
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-        </div>
-      </Portal>
+      <MutationObserverTest1 ></MutationObserverTest1>
     </div>
   );
 });
