@@ -1,6 +1,5 @@
 import { memo, useEffect, useRef } from "react";
 // import './App.scss'
-import MutationObserverTest1 from "./components/MutationObserverTest";
 
 const App = memo(() => {
   const portalRef = useRef(null);
@@ -9,7 +8,6 @@ const App = memo(() => {
   }, [])
   return (
     <div>
-      <MutationObserverTest1 ></MutationObserverTest1>
     </div>
   );
 });
