@@ -1,13 +1,13 @@
 import { memo, useEffect, useRef } from "react";
+import ReacSpringAnimation from "./components/ReactSpringAnimation";
+import ReactSpringAnimation1 from "./components/ReactSpringAnimation/ReactSpringAnimation1";
 // import './App.scss'
 
 const App = memo(() => {
-  const portalRef = useRef(null);
-  useEffect(() => {
-    console.log(portalRef)
-  }, [])
   return (
     <div>
+      {/* <ReacSpringAnimation /> */}
+      <ReactSpringAnimation1 />
     </div>
   );
 });
