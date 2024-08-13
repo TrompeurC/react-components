@@ -1,108 +1,46 @@
 .calendar {
-  width: 100%;
-
+  @apply w-full;
   &-month {
-    &-week-list {
-      display: flex;
-      box-sizing: border-box;
-      padding: 0;
-      width: 100%;
-      box-sizing: border-box;
+
+    &-header {
+      @apply flex border-b-gray-200  border-b;
       border-bottom: 1px solid #ccc;
 
       &-item {
-        padding: 20px 16px;
-        text-align: left;
-        flex: 1;
-        color: #7d7d7f;
+        @apply flex-1 px-4 py-5 text-sm text-gray-500;
       }
     }
 
     &-body {
+
       &-row {
-          height: 100px;
-          display: flex;
+        @apply flex ;
       }
       &-cell {
-          flex: 1;
-          border: 1px solid #eee;
-          margin: 0 -1px -1px 0;
-          color: #ccc;
-          overflow: hidden;
+        @apply flex-1 px-4 py-5 text-sm text-gray-400 border-solid border-gray-100;
+        margin: 0 -1px -1px 0;
+
         &-current {
-          color: #000;
-        }
-        &-date {
-          padding: 10px;
-          cursor: pointer;  
-          &-value {
-            height: 28px;
-          }          
-          &-selected {
-            background: blue;
-            width: 28px;
-            height: 28px;
-            line-height: 28px;
-            text-align: center;
-            color: #fff;
-            border-radius: 50%;
-            cursor: pointer;
-          }
+          @apply text-gray-900 cursor-pointer;
         }
       }
     }
   }
 
   &-header {
-    &-left {
-        display: flex;
-        align-items: center;
+    align-items: center;
 
-        height: 28px;
-        line-height: 28px;
+    @apply flex items-center leading-7 h-7;
+    &-l {
+      @apply flex gap-2;
+
+      &-icon {
+        @apply cursor-pointer  px-2 text-xs h-7 w-7 leading-7 hover:bg-gray-200 text-center duration-200 rounded-sm;
+      }
+
+      &-btn {
+        @apply bg-[#eee] hover:bg-[#ccc] border-none px-4  py-0 leading-7 cursor-pointer rounded-sm duration-200;
+      }
     }
-
-    &-value {
-        font-size: 20px;
-    }
-
-    &-btn {
-        background: #eee;
-        cursor: pointer;
-        border: 0;
-        padding: 0 15px;
-        line-height: 28px;
-
-        &:hover {
-          transition: all .3s;
-          background: #ccc;
-        }
-    }
-  
-    &-icon {
-        width: 28px;
-        height: 28px;
-
-        line-height: 28px;
-    
-        border-radius: 50%;
-        text-align: center;
-        font-size: 12px;
-
-        user-select: none;
-        cursor: pointer;
-
-        margin-right: 12px;
-        &:not(:first-child) {
-            margin: 0 12px;
-        }
-
-        &:hover {
-          transition: all .3s;
-          background: #ccc;
-        }
-    }
-  
-}
-
+  }
 }
