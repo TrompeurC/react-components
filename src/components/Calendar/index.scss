@@ -14,14 +14,25 @@
     &-body {
 
       &-row {
-        @apply flex ;
+        @apply flex h-[100px];
       }
       &-cell {
-        @apply flex-1 px-4 py-5 text-sm text-gray-400 border-solid border-gray-100;
+        @apply flex-1 px-4 py-1 text-sm text-gray-400 border-solid border-gray-100 overflow-hidden cursor-pointer;
         margin: 0 -1px -1px 0;
 
         &-current {
-          @apply text-gray-900 cursor-pointer;
+          @apply text-gray-900 ;
+        }
+
+        &-selected {
+          background: blue;
+          width: 28px;
+          height: 28px;
+          line-height: 28px;
+          text-align: center;
+          color: #fff;
+          border-radius: 50%;
+          cursor: pointer;
         }
       }
     }

@@ -8,7 +8,7 @@ const App = memo(() => {
 
   return (
     <div>
-      <Calendar value={dayjs()} />
+      <Calendar value={dayjs('2023-11-11')} locale="en-US" />
     </div>
   );
 });
