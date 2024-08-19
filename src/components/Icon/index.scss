@@ -1,0 +1,8 @@
+.icon {
+
+  @apply inline-block;
+
+  &-spin {
+    @apply animate-spin ;
+  }
+}
