@@ -1,0 +1,33 @@
+.space {
+  @apply inline-flex;
+
+  &-vertical {
+    @apply flex-col;
+  }
+
+  &-horizontal {
+    @apply flex-row;
+  }
+
+  &-wrap {
+    @apply flex-wrap;
+  }
+
+  &-align {
+    &-center {
+      align-items: center;
+    }
+
+    &-start {
+      align-items: flex-start;
+    }
+
+    &-end {
+      align-items: flex-end;
+    }
+
+    &-baseline {
+      align-items: baseline;
+    }
+  }
+}
